@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <input id="namebox">
+  <button onclick="sayHello()">GO</button>
+
+
+  <script>
+    // alert('Hello World')
+    // console.log('Hello World')
+
+    function sayHello() {
+
+      let nb = document.getElementById('namebox')
+
+      alert('Hello ' + nb.value)
+
+      let newelement = document.createElement('h1')
+      newelement.innerText = nb.value
+      document.body.append(newelement)
+
+
+      document.getElementById('namebox').value
+    }
+  </script>
+
+</body>
+</html>
