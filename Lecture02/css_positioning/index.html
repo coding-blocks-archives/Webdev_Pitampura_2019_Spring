@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      padding: 20px;
+      margin: 20px;
+      border: solid black 5px;
+    }
+    .outer {
+      background-color: lightsalmon;
+    }
+    .middle {
+      background-color: lightskyblue;
+    }
+    .inner {
+      background-color: lightseagreen;
+    }
+
+    #sixteen {
+      position: relative;
+      bottom: 300px;
+      right: 100px;
+    }
+    #m3 {
+      position: absolute;
+      top: 50px;
+    }
+    #eleven {
+      position: absolute;
+      top: 10px;
+    }
+
+    #six {
+      position: fixed;
+      top: 10px;
+      right: 30px;
+    }
+
+    #eight {
+      position: sticky;
+      top: 50px;
+      bottom: 50px;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">1</div>
+      <div class="inner">2</div>
+      <div class="inner">3</div>
+      <div class="inner">4</div>
+      <div class="inner">5</div>
+    </div>
+    <div class="middle">
+      <div id="six" class="inner">6</div>
+      <div id="seven" class="inner">7</div>
+      <div id="eight" class="inner">8</div>
+      <div class="inner">9</div>
+    </div>
+    <div id="m3" class="middle">
+      <div class="inner">10</div>
+      <div id="eleven" class="inner">11</div>
+      <div class="inner">12</div>
+      <div class="inner">13</div>
+      <div class="inner">14</div>
+    </div>
+    <div class="middle">
+      <div id="fifteen" class="inner">15</div>
+      <div id="sixteen" class="inner">16</div>
+      <div class="inner">17</div>
+      <div class="inner">18</div>
+      <div class="inner">19</div>
+    </div>
+    <div class="middle">
+      <div class="inner">20</div>
+      <div class="inner">21</div>
+      <div class="inner">22</div>
+      <div class="inner">23</div>
+      <div class="inner">24</div>
+    </div>
+  </div>
+</body>
+</html>
