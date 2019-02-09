@@ -1,0 +1,56 @@
+.scene {
+  height: 400px;
+  width: 400px;
+  perspective: 400px;
+}
+
+.cube {
+  margin: 100px;
+  transform-style: preserve-3d;
+}
+
+.cube:hover {
+  transform: rotateX(20deg) rotateZ(20deg);
+  transition: 2s;
+}
+
+.cube:active {
+  transform: rotateY(70deg) rotateZ(120deg);
+  transition: 2s;
+}
+
+.face {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+  opacity: 0.5;
+  border: solid black 1px;
+  color: white;
+  font-size: 30pt;
+  text-align: center;
+}
+
+.face.front {
+  transform: translateZ(50px)
+}
+
+.face.back {
+  transform: translateZ(-50px)
+}
+
+.face.left {
+  transform: translateX(-50px) rotateY(90deg);
+}
+
+.face.right {
+  transform: translateX(50px) rotateY(90deg);
+}
+
+.face.top {
+  transform: translateY(-50px) rotateX(90deg);
+}
+
+.face.bottom {
+  transform: translateY(50px) rotateX(90deg);
+}
