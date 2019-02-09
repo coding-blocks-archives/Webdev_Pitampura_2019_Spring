@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  height: 300px;
+  width: 70%;
+  background-color: gold;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: center;
+}
+
+.item {
+  height: 60px;
+  width: 60px;
+  margin: 10px;
+  background-color: brown;
+  color: white;
+  font-size: 20pt;
+  flex-grow: 1;
+}
+
+.four {
+  height: 20px;
+  flex-shrink: 0;
+  order: 1
+}
+
+.five {
+  flex-shrink: 5;
+
+}
+
+.six {
+  padding-top: 20px;
+  order: 2;
+}
+
+.seven {
+  height: 130px;
+}
+
+.nine {
+  flex-grow: 5;
+}
