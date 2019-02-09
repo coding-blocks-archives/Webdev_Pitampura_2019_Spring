@@ -1,0 +1,24 @@
+div {
+  margin: 50px;
+  height: 180px;
+  width: 180px;
+  background-color: deepskyblue;
+  border: solid black 2px;
+  animation: zoomrotate 2s 50;
+}
+
+@keyframes zoomrotate {
+  0% {
+
+  }
+
+  20% {
+    transform: scale(0.5) rotate(90deg)
+  }
+
+  100% {
+
+  }
+
+}
+
