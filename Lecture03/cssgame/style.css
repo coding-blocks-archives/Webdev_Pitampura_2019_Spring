@@ -1,0 +1,43 @@
+.gamebox {
+  height: 400px;
+  width: 600px;
+  background-color: bisque;
+  margin: 20px;
+}
+
+.obstacle {
+  height: 50px;
+  width: 50px;
+  margin-left: 150px;
+  background-color: brown;
+  display: inline-block;
+  animation: updown 2s infinite ease;
+}
+.player {
+  height: 50px;
+  width: 50px;
+  transform: translateY(175px);
+  background-color: darkcyan;
+  display: inline-block;
+  animation: leftright 2s infinite linear;
+  animation-play-state: paused;
+}
+.obs2 {
+  animation-duration: 1s;
+}
+
+@keyframes updown {
+  50% {
+    transform: translateY(350px)
+  }
+}
+
+@keyframes leftright {
+  50% {
+    transform: translate(550px, 175px)
+  }
+}
+
+.gamebox:active > .player {
+  animation-play-state: running;
+}
