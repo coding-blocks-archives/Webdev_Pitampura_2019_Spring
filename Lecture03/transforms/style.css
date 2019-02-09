@@ -1,0 +1,40 @@
+div {
+  background-color: lightseagreen;
+  border: black 1px solid;
+  color: white;
+  height: 60px;
+  width: 60px;
+  margin: 20px;
+}
+
+.one {
+  transform: scaleY(2)
+}
+
+.three {
+  transform: scale(0.5, 0.5)
+}
+
+.four {
+  transform: translate(-30px, 30px)
+}
+
+.six {
+  transform: rotateY(60deg)
+}
+
+.seven {
+  transform: skewX(10deg)
+}
+
+.eight {
+  transform: skewY(45deg)
+}
+
+.nine {
+  transform: matrix(2, 0.1, 0.1, 2, 30, 30)
+}
+
+.eleven {
+  transform: scale(2, 2) translate(30px, 30px) skew(3.6deg, 3.6deg);
+}

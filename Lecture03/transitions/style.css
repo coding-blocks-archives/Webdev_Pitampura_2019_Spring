@@ -1,0 +1,25 @@
+div {
+  height: 80px;
+  width: 80px;
+  margin: 30px;
+  background-color: deeppink;
+  transition: 1s;
+}
+
+.one:hover {
+  width: 300px;
+  background-color: green;
+  transition: 1s width, 4s background-color;
+}
+
+.inner {
+  height: 30px;
+  width: 30px;
+  margin: 10px;
+  background-color: lightskyblue;
+}
+
+div:hover > .inner {
+  transform: translateX(300px);
+  transition: 1s;
+}
