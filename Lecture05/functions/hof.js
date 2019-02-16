@@ -13,3 +13,5 @@ x('Mumbai')
 
 let y = createGreeter('Hello')
 y('World')
+
+createGreeter('Goodevening')('Folks')

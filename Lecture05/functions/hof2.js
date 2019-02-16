@@ -3,7 +3,7 @@ function greet(fetchName) {
   console.log('Hello ' + fetchName())
 }
 
-
-greet(function () {
+function x () {
   return 'Alpha'
-})
+}
+greet(x)
