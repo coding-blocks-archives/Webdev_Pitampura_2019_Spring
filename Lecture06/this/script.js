@@ -29,3 +29,4 @@ let obj2 = {
 }
 
 obj2.t3 = () => this
+obj2.t4 = this
