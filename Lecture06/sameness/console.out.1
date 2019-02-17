@@ -1,0 +1,47 @@
+1 == '1'
+true
+1 === '1'
+false
+[1,2] == [1,2]
+false
+let x = [1,2]
+undefined
+let y = x
+undefined
+y == x
+true
+let z = {a: 1, b: 2}
+undefined
+z.toString()
+"[object Object]"
+z.toString = function () {return 'a = ' + this.a + ', b = ' + this.b }
+function toString()
+
+z.toString()
+"a = 1, b = 2"
+Number('2')
+2
+Number('')
+0
+Number('      ')
+0
+Number('\t')
+0
+Number('\n')
+0
+'' == 0
+true
+'\t' == 0
+true
+'   ' == 0
+true
+'\n' == 0
+true
+'' == '\t'
+false
+'' == '\t' == ''
+true
+true == ''
+false
+false == ''
+true
