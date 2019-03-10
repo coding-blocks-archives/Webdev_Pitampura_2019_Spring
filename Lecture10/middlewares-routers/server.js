@@ -18,13 +18,31 @@ function m3 (req, res, next) {
   console.log('m3 running')
   next()
 }
+function m4 (req, res, next) {
+  console.log('m4 running')
+  console.log('url', req.url)
+  console.log('originalUrl', req.originalUrl)
+  console.log('path', req.path)
+  next()
+}
+function m5 (req, res, next) {
+  console.log('m5 running')
+  next()
+}
 
 app.use(m1)
 app.use(m2)
 app.use(m3)
+app.use('/a', m4)
+app.use('/b', m5)
 
 app.get('/', (req, res) => {
   res.send('Hello')
+})
+
+
+app.get('/a', (req, res) => {
+  res.send('Hi from A')
 })
 
 
