@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="/js/todolist.js"></script>
 </head>
 <body>
   <h1>Task Manager</h1>
 
   <form action="/tasks" method="POST">
-    <input name="task">
+    <input id="task" name="task">
 
-    <input type="number" value="1"
+    <input id="priority" type="number" value="1"
       max="5" min="1" name="priority">
 
-    <button type="submit">ADD</button>
+    <button id="addtask" type="submit">ADD</button>
   </form>
 
-  <ul>
+  <ul id="tasklist">
     {{#each tasks as |item|}}
       <li>
         {{item.priority}}
