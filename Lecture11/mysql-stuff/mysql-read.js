@@ -20,3 +20,5 @@ connection.query(
     }
   }
 )
+
+console.log('query done')
