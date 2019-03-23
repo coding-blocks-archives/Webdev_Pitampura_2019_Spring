@@ -4,6 +4,11 @@ const app = express()
 const server = http.Server(app)
 const socketio = require('socket.io')
 
+const {
+  db,
+  Chats
+} = require('./db')
+
 const io = socketio(server)
 
 const idUsernameMap = {}
@@ -20,17 +25,28 @@ io.on('connection', (socket) => {
   socket.on('chat', (data) => {
     console.log('chat received ' + data.msg)
 
-    // save the messages to a db
-
-    io.emit('chat_rcvd', {
+    const chatObj = {
       username: idUsernameMap[socket.id],
       msg: data.msg
-    })
+    }
+    // not awaiting, let  it do in background
+    Chats.create(chatObj)
+
+    io.emit('chat_rcvd', chatObj)
   })
 })
 
 app.use('/', express.static(__dirname + '/public'))
 
-server.listen(2323, () => {
-  console.log('Server started on http://localhost:2323')
+app.get('/chats', async (req, res) => {
+  const chats = await Chats.findAll()
+  res.send(chats)
 })
+
+db.sync()
+  .then(() => {
+    server.listen(2323, () => {
+      console.log('Server started on http://localhost:2323')
+    })
+  })
+  .catch(console.error)

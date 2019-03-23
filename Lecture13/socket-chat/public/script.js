@@ -4,8 +4,6 @@ socket.on('connect', () => {
   console.log('Socket created ' + socket.id)
 })
 
-
-
 $(() => {
   $('#chatbox').hide()
 
@@ -18,6 +16,7 @@ $(() => {
   socket.on('logged_in', () => {
     $('#loginform').hide()
     $('#chatbox').show()
+    loadOldChats()
   })
 
   $('#send').click(() => {
@@ -26,12 +25,22 @@ $(() => {
     })
   })
 
-  socket.on('chat_rcvd', (data) => {
+  function addChat(chatObj) {
     $('#chats').append(
       $('<li>').text(
-        `${data.username}: ${data.msg}`
+        `${chatObj.username}: ${chatObj.msg}`
       )
     )
-  })
+  }
+
+  function loadOldChats () {
+    $.get('/chats', (chats) => {
+      for (let chat of chats)  {
+        addChat(chat)
+      }
+    })
+  }
+
+  socket.on('chat_rcvd', addChat)
 
 })
