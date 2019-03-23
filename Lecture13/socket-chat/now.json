@@ -1,8 +1,0 @@
-{
-  "version": 2,
-  "name": "socket-chat",
-  "builds": [{
-    "src": "server.js",
-    "use": "@now/node"
-  }]
-}
