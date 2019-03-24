@@ -23,6 +23,7 @@ MongoClient.connect(DB_URL, (err, client) => {
     if (err) throw err
 
     console.log(results)
+    client.close()
   })
 
 })
